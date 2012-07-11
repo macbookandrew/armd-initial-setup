@@ -3,7 +3,7 @@
 Plugin Name: AndrewRMinion Design Initial Setup
 Plugin URI: http://code.andrewrminion.com/plugins/initial-setup/
 Description: Basic initial setup for new sites
-Version: 1.0
+Version: 1.1
 Author: Andrew Minion
 Author URI: http://andrewrminion.com
 License: GPL2
@@ -63,6 +63,15 @@ function ARMD_initial_setup() {
 		'display_name' => 'Andrew Minion',
 		'website' => 'http://andrewrminion.com'
 	) );
+	
+	// install WP Remote plugin
+	// install Audit Trail plugin
+	// install Google Analytics for WP plugin
+	// install Peter's Login Redirect plugin
+	
+	// delete twentyten theme
+	// delete Hello Dolly plugin
+	
 }
 
 register_activation_hook( __FILE__, 'ARMD_initial_setup' );
