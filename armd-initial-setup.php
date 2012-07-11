@@ -55,6 +55,14 @@ function ARMD_initial_setup() {
 	wp_trash_post( 1 );
 	wp_trash_post( 2 );
 	
+	// update default user
+	update_user_meta( 1, 'first_name', 'Andrew' );
+	update_user_meta( 1, 'last_name', 'Minion' );
+	wp_update_user( array (
+		'ID' => 1,
+		'display_name' => 'Andrew Minion',
+		'website' => 'http://andrewrminion.com'
+	) );
 }
 
 register_activation_hook( __FILE__, 'ARMD_initial_setup' );
