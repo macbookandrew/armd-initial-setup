@@ -64,13 +64,19 @@ function ARMD_initial_setup() {
 		'website' => 'http://andrewrminion.com'
 	) );
 	
+	// enable XML-RPC
+	
 	// install WP Remote plugin
 	// install Audit Trail plugin
 	// install Google Analytics for WP plugin
 	// install Peter's Login Redirect plugin
+	// use curl? use reminders at top (similar to WP Remote or Akismet) with links to install?
 	
 	// delete twentyten theme
 	// delete Hello Dolly plugin
+	// use shell script?
+	
+	// show reminder to deactivate/delete self
 	
 }
 
