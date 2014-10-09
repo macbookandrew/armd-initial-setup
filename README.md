@@ -10,7 +10,7 @@ A plugin that sets up a few basic things on new WordPress installs.
 - Format the time to display as 5:47 AM
 - Update the timezone to New York
 - Disable comments by default
-- Show a page rather than posts on the front page, and create an **Updates** page for the posts archive
+- Show a page rather than posts on the front page, create an **Updates** page for the posts archive, and an **Updating Instructions** page for internal use
 - Remove the default page and post created by WordPress
 - Update the default user to my name/email address
 

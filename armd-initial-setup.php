@@ -3,7 +3,7 @@
 Plugin Name: AndrewRMinion Design Initial Setup
 Plugin URI: http://code.andrewrminion.com/plugins/initial-setup/
 Description: Basic initial setup for new sites
-Version: 1.1
+Version: 1.2
 Author: Andrew Minion
 Author URI: http://andrewrminion.com
 License: GPL2
@@ -26,7 +26,7 @@ function ARMD_initial_setup() {
 	// set permalink structure
 	update_option( 'permalink_structure', '/%postname%/' );
 	
-	// show page instead of posts on front
+	// add new home page
 	$new_home_page_array = array (
 		'post_author' => 1,
 		'post_content' => 'Created on ' . date('r') . ' as part of initial setup by AndrewRMinion Design.',
@@ -37,16 +37,29 @@ function ARMD_initial_setup() {
 	);
 	$home_id = wp_insert_post( $new_home_page_array );
 	
+    // add updates page for blog archive
 	$new_post_page_array = array (
 		'post_author' => 1,
 		'post_content' => 'Created on ' . date('r') . ' as part of initial setup by AndrewRMinion Design.',
 		'post_name' => 'updates',
-		'post_status' => 'publish',
+		'post_status' => 'draft',
 		'post_title' => 'Updates',
 		'post_type' => 'page'
 	);
 	$post_id = wp_insert_post( $new_post_page_array );
 	
+    // add site updating instructions page
+	$new_post_page_array = array (
+		'post_author' => 1,
+		'post_content' => 'Created on ' . date('r') . ' as part of initial setup by AndrewRMinion Design.',
+		'post_name' => 'updating-instructions',
+		'post_status' => 'private',
+		'post_title' => 'Updating Instructions',
+		'post_type' => 'page'
+	);
+	$post_id = wp_insert_post( $new_post_page_array );
+
+    // show home page as front page
 	update_option( 'show_on_front', 'page' );
 	update_option( 'page_on_front', $home_id );
 	update_option( 'page_for_posts', $post_id );
